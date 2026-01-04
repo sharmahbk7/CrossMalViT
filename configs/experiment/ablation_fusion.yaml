@@ -1,0 +1,25 @@
+experiment_name: crossmal_vit_ablation_fusion
+
+variants:
+  - name: early_fusion
+    fusion_layers: [2, 5, 8]
+    fusion_alpha: 0.72
+  - name: mid_fusion
+    fusion_layers: [4, 7, 10]
+    fusion_alpha: 0.72
+  - name: late_fusion
+    fusion_layers: [8, 10, 11]
+    fusion_alpha: 0.72
+
+training:
+  max_epochs: 60
+  batch_size: 32
+  num_workers: 8
+  learning_rate: 0.00012
+  weight_decay: 0.048
+  ldam_margin: 0.48
+  ldam_scale: 30.0
+  lambda_contrast: 0.32
+  temperature: 0.07
+
+seed: 42

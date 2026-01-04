@@ -1,0 +1,19 @@
+population_size: 30
+max_iterations: 15
+elite_ratio: 0.1
+initial_std: 0.3
+std_decay: 0.95
+
+search_space:
+  fusion_alpha: [0.3, 0.9, continuous]
+  cross_weight_raw_entropy: [0.1, 0.5, continuous]
+  cross_weight_raw_frequency: [0.1, 0.5, continuous]
+  cross_weight_entropy_frequency: [0.1, 0.5, continuous]
+  lambda_contrast: [0.1, 0.5, continuous]
+  temperature: [0.05, 0.15, continuous]
+  ldam_margin: [0.2, 1.0, continuous]
+  focal_gamma: [1.0, 3.0, continuous]
+  mixup_alpha: [0.2, 0.6, continuous]
+  cutmix_prob: [0.3, 0.7, continuous]
+  learning_rate: [5e-5, 3e-4, continuous]
+  weight_decay: [0.01, 0.1, continuous]

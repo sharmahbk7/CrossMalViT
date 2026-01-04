@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: CrossMal-ViT: Token-Level Cross-View Malware Representation Learning with Vision Transformers
+message: If you use this software, please cite it.
+authors:
+  - family-names: Your
+    given-names: Name
+version: 1.0.0
+date-released: 2024-01-01
+license: MIT
+repository-code: https://github.com/your-org/crossmal-vit
+keywords:
+  - malware
+  - vision-transformer
+  - cybersecurity

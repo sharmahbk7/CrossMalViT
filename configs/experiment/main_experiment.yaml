@@ -1,0 +1,50 @@
+experiment_name: crossmal_vit_main
+
+model:
+  img_size: 224
+  patch_size: 16
+  in_chans: 1
+  num_classes: 18
+  embed_dim: 768
+  depth: 12
+  num_heads: 12
+  mlp_ratio: 4.0
+  fusion_layers: [4, 7, 10]
+  fusion_alpha: 0.72
+  cross_weights:
+    raw_entropy: 0.34
+    raw_frequency: 0.28
+    entropy_frequency: 0.18
+  drop_rate: 0.0
+  attn_drop_rate: 0.0
+  drop_path_rate: 0.1
+  pretrained: true
+
+data:
+  img_size: 224
+  entropy_window: 9
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+
+training:
+  max_epochs: 100
+  batch_size: 32
+  num_workers: 8
+  learning_rate: 0.00012
+  weight_decay: 0.048
+
+  ldam_margin: 0.48
+  ldam_scale: 30.0
+  lambda_contrast: 0.32
+  temperature: 0.07
+
+  mixup_alpha: 0.42
+  cutmix_prob: 0.52
+
+  mixed_precision: true
+  gradient_clip: 1.0
+  accumulate_grad: 1
+  patience: 15
+
+seed: 42

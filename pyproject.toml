@@ -1,0 +1,86 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "crossmal-vit"
+version = "1.0.0"
+description = "Token-Level Cross-View Malware Classification with Vision Transformers"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "Your Name", email = "your.email@example.com"}]
+keywords = ["malware", "vision-transformer", "deep-learning", "cybersecurity"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+    "timm>=0.9.0",
+    "pytorch-lightning>=2.0.0",
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "scikit-learn>=1.2.0",
+    "pandas>=2.0.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "pillow>=9.5.0",
+    "opencv-python>=4.7.0",
+    "omegaconf>=2.3.0",
+    "hydra-core>=1.3.0",
+    "wandb>=0.15.0",
+    "tqdm>=4.65.0",
+    "einops>=0.6.0",
+    "albumentations>=1.3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.0.270",
+    "mypy>=1.0",
+    "pre-commit>=3.0",
+]
+docs = [
+    "mkdocs>=1.4",
+    "mkdocs-material>=9.0",
+    "mkdocstrings[python]>=0.20",
+]
+
+[project.scripts]
+crossmal-train = "scripts.train:main"
+crossmal-eval = "scripts.evaluate:main"
+crossmal-predict = "scripts.predict:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["crossmal_vit*"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I", "N", "D", "UP"]
+ignore = ["D100", "D104"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-v --cov=crossmal_vit --cov-report=term-missing"

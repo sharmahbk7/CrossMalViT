@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  crossmal-vit:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: crossmal-vit:latest
+    volumes:
+      - ../data:/app/data
+      - ../outputs:/app/outputs
+    environment:
+      - PYTHONUNBUFFERED=1

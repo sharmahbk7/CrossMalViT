@@ -1,0 +1,22 @@
+experiment_name: crossmal_vit_ablation_views
+
+variants:
+  - configs/model/ablations/single_view_raw.yaml
+  - configs/model/ablations/single_view_entropy.yaml
+  - configs/model/ablations/two_view_raw_entropy.yaml
+  - configs/model/ablations/late_fusion.yaml
+
+training:
+  max_epochs: 60
+  batch_size: 32
+  num_workers: 8
+  learning_rate: 0.00012
+  weight_decay: 0.048
+  ldam_margin: 0.48
+  ldam_scale: 30.0
+  lambda_contrast: 0.32
+  temperature: 0.07
+  mixup_alpha: 0.42
+  cutmix_prob: 0.52
+
+seed: 42

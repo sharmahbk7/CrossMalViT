@@ -1,0 +1,19 @@
+name: crossmal_vit_base
+img_size: 224
+patch_size: 16
+in_chans: 1
+num_classes: 18
+embed_dim: 768
+depth: 12
+num_heads: 12
+mlp_ratio: 4.0
+fusion_layers: [4, 7, 10]
+fusion_alpha: 0.72
+cross_weights:
+  raw_entropy: 0.34
+  raw_frequency: 0.28
+  entropy_frequency: 0.18
+drop_rate: 0.0
+attn_drop_rate: 0.0
+drop_path_rate: 0.1
+pretrained: true
