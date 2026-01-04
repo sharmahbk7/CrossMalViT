@@ -1,4 +1,4 @@
-# CrossMal-ViT ????
+# CrossMal-ViT
 
 [![Paper](https://img.shields.io/badge/Paper-Journal-blue)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -25,7 +25,7 @@ Input Byteplot (224x224)
              18 Classes
 ```
 
-## ?? Key Results
+## Key Results
 
 | Model | Accuracy | Macro-F1 | ECE | Latency |
 |-------|----------|----------|-----|---------|
@@ -33,7 +33,7 @@ Input Byteplot (224x224)
 | Swin-Base | 98.71% | 98.21% | 0.028 | 5.8ms |
 | ConvNeXt-Base | 98.62% | 98.07% | 0.031 | 6.4ms |
 
-## ?? Quick Start
+## Quick Start
 
 Install dependencies:
 
@@ -54,7 +54,7 @@ Run inference on a single image:
 python scripts/predict.py --config configs/experiment/main_experiment.yaml   --checkpoint outputs/checkpoints/best.ckpt   --image path/to/byteplot.png
 ```
 
-## ?? Project Structure
+## Project Structure
 
 ```
 CrossMal-ViT/
@@ -67,17 +67,17 @@ CrossMal-ViT/
 ??? docs/                 # Documentation
 ```
 
-## ?? Citation
+## Citation
 
 ```bibtex
 @article{crossmalvit2024,
   title={CrossMal-ViT: Token-Level Cross-View Malware Representation Learning with Vision Transformers Optimized via Big Bang-Big Crunch},
-  author={Your Name and Coauthors},
+  author={Osho Sharma, Vibha Ayri},
   journal={Journal TBD},
-  year={2024}
+  year={2026}
 }
 ```
 
-## ?? License
+## License
 
 MIT License. See `LICENSE` for details.
